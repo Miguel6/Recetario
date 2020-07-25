@@ -6,16 +6,15 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using DataAccess.MongoDB;
+using MongoDB;
 
-namespace Recetario
+namespace DataAccess
 {
     public class Program
     {
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();
-            Console.WriteLine($"DATOS: {new Connection().ConnectToMongoDBAsync()}");
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
