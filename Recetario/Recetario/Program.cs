@@ -15,7 +15,7 @@ namespace Recetario
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();
-            Console.WriteLine($"DATOS: {new Connection().ConnectToMongoDBAsync()}");
+            Console.WriteLine($"DATOS: {new DatabaseConnection().GetMongoClient()}");
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
